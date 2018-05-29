@@ -17,7 +17,9 @@
         <br>
         <h3>Who are you..?</h3>
         <br>
-        <a href="{{ url_oidc }}" class="btn btn-success" role="button"><i class="fa fa-sign-in-alt"></i> Log In! (OIDC)</a>
-        <br><br>
-        <a href="{{ url_saml2 }}" class="btn btn-success" role="button"><i class="fa fa-sign-in-alt"></i> Log In! (SAML2)</a>
+        {% if url_oidc is defined %}
+          <a href="{{ url_oidc }}" class="btn btn-success" role="button"><i class="fa fa-sign-in-alt"></i> Log In! (OIDC)</a>
+        {% else %}
+          <a href="{{ url_saml2 }}" class="btn btn-success" role="button"><i class="fa fa-sign-in-alt"></i> Log In! (SAML2)</a>
+        {% endif %}
 {% endblock %}
