@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}Who???{% endblock %}
+
+{% block style %}
+    body {
+      background-color: darkolivegreen;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+{% endblock %}
+
+{% block content %}
+        <img src="https://secure.i.telegraph.co.uk/multimedia/archive/03435/Voldemort_3435101b.jpg">
+        <br>
+        <h3>Who are you..?</h3>
+        <br>
+        <a href="{{ url_oidc }}" class="btn btn-success" role="button"><i class="fa fa-sign-in-alt"></i> Log In! (OIDC)</a>
+        <br><br>
+        <a href="{{ url_saml2 }}" class="btn btn-success" role="button"><i class="fa fa-sign-in-alt"></i> Log In! (SAML2)</a>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}ERROR!!!{% endblock %}
+
+{% block style %}
+    body {
+      background-color: darkred;
+      color: gold;
+    }
+    a {
+      color: red;
+    }
+{% endblock %}
+
+{% block content %}
+        <img src="https://img.memecdn.com/harry-potter-drawing-fail_o_669310.jpg">
+        <br>
+        <h3>OH NOES!!!</h3>
+        <br>
+        <b><i class="fa fa-exclamation-triangle"></i> ERROR: </b><u>{{err}}</u>
+        <br><br>
+        <a href="https://sign.dag.ninja" class="btn btn-light" role="button"><i class="fa fa-undo"></i> Try again!</a>
+{% endblock %}
