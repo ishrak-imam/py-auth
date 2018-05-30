@@ -6,23 +6,22 @@ from flask import Flask, g, request, render_template
 
 from oidc_funcs import *
 # oidc_funcs contains: getToken(code) & getUserInfo(token) - See oidc_funcs.py for details.
+import settings_preprod_demo as cfg
+"""IMPORTANT:
+    You need to change the file settings_preprod_demo.py or create a copy with
+    your own setting.
+    The settings in settings_preprod_demo.py are exmaple settings ONLY!
+    See settings_preprod_demo.py for details.
+"""
 
 app = Flask(__name__)
-ISSUER_ID = 'https://preprod.signicat.com/oidc/'
-CLIENT_ID = 'demo-preprod'
-SCOPE = 'openid+profile+signicat.national_id'
-REDIRECT_URI = 'https://sign.dag.ninja/consume'
-STATE = 'ZTATE'
-ACR_VALUES = 'urn:signicat:oidc:portal:auth-portal'
-URI_OIDC = ISSUER_ID + 'authorize?response_type=code&scope=' + SCOPE + '&client_id=' \
-    + CLIENT_ID + '&redirect_uri=' + REDIRECT_URI + '&state=' + STATE + '&acr_values=' + ACR_VALUES
 
 
 @app.route('/')
 def hello_world():
     """Returns a simple template"""
-    STATE = ''.join(random.choice('ABCDEF0123456789') for _ in range(8))
-    return render_template('intro.html', url_oidc=URI_OIDC.replace('ZTATE', STATE), state=STATE)
+    cfg.oidc['STATE'] = ''.join(random.choice('ABCDEF0123456789') for _ in range(8))
+    return render_template('intro.html', url_oidc=cfg.URI_OIDC.replace('ZTATE', cfg.oidc['STATE']), state=cfg.oidc['STATE'])
 
 @app.route('/consume')
 def eat():
@@ -64,7 +63,7 @@ def eat():
     if 'sub' in uinfo:
         sub = uinfo['sub']
     # Everything is (hopefully) good! Return all the data with the template.
-    return render_template('uinfo.html', name=name, bday=natid, sub=sub, method=('OIDC'))
+    return render_template('uinfo.html', name=name, bday=natid, sub=sub, method='OIDC')
 
 if __name__ == '__main__':
     # Spool up a very simple webserver with HTTPS.
