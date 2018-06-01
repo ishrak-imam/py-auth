@@ -1,6 +1,7 @@
+# You need a certificate+key file to serve HTTPS. Use for instance let's encrypt.
 CERT = {
-    'crt': '/etc/letsencrypt/live/sign.dag.ninja/cert.pem',
-    'key': '/etc/letsencrypt/live/sign.dag.ninja/privkey.pem'
+    'crt': '/path/to/cert.pem',
+    'key': '/path/to/privkey.pem'
 }
 # Settings for OIDC
 oidc = {
