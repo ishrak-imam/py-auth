@@ -20,8 +20,8 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     """Returns a simple template"""
-    cfg.oidc['STATE'] = ''.join(random.choice('ABCDEF0123456789') for _ in range(8))
-    return render_template('intro.html', url_oidc=cfg.URI_OIDC.replace('ZTATE', cfg.oidc['STATE']), state=cfg.oidc['STATE'])
+    state = ''.join(random.choice('ABCDEF0123456789') for _ in range(8))
+    return render_template('intro.html', url_oidc=cfg.URI_OIDC.replace('ZTATE', state), state=state)
 
 @app.route('/consume')
 def eat():
@@ -53,6 +53,7 @@ def eat():
         # Something went wrong with getting UserInfo - return error.
         return render_template('error.html', err=uinfo['error_description'])
     # Find values, set them accordingly.
+    print(uinfo)
     if 'name' in uinfo:
         name = uinfo['name']
     if 'signicat.national_id' in uinfo:
