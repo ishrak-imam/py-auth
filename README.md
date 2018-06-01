@@ -11,6 +11,7 @@ This project illustrates a simple implementation of Signicat Authentication via 
 
 * Built in: json, random, ssl
 * [Flask](http://flask.pocoo.org/): Used for serving a minimal SSL-enabled web server & API.
+* [Requests](http://docs.python-requests.org/en/master/): HTTP for Humans.
 
 **The project has two main functionalities**:
 
