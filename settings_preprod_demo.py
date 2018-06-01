@@ -1,3 +1,7 @@
+CERT = {
+    'crt': '/etc/letsencrypt/live/sign.dag.ninja/cert.pem',
+    'key': '/etc/letsencrypt/live/sign.dag.ninja/privkey.pem'
+}
 # Settings for OIDC
 oidc = {
     'ISSUER_ID': 'https://preprod.signicat.com/oidc/',      # Base URI

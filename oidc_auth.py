@@ -10,12 +10,11 @@ import settings_preprod_demo as cfg
 """IMPORTANT:
     You need to change the file settings_preprod_demo.py or create a copy with
     your own setting.
-    The settings in settings_preprod_demo.py are exmaple settings ONLY!
+    The settings in settings_preprod_demo.py are example settings ONLY!
     See settings_preprod_demo.py for details.
 """
 
 app = Flask(__name__)
-
 
 @app.route('/')
 def hello_world():
@@ -68,5 +67,5 @@ def eat():
 
 if __name__ == '__main__':
     # Spool up a very simple webserver with HTTPS.
-    context = ('/etc/letsencrypt/live/sign.dag.ninja/cert.pem', '/etc/letsencrypt/live/sign.dag.ninja/privkey.pem')
+    context = (cfg.CERT['crt'], cfg.CERT['key'])
     app.run(host='0.0.0.0', port=443, ssl_context=context)
