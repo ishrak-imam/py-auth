@@ -8,7 +8,7 @@ oidc = {
     'ISSUER_ID': 'https://preprod.signicat.com/oidc/',      # Base URI
     'CLIENT_ID': 'demo-preprod',                            # Service name
     'SCOPE': 'openid+profile+signicat.national_id',         # Scope
-    'REDIRECT_URI': 'https://example.com/redirect',       # Redirect URI ! MUST CHANGE !
+    'REDIRECT_URI': 'https://example.com/redirect',         # Redirect URI ! MUST CHANGE !
     'STATE': 'ZTATE',                                       # "Placeholder" state
     'ACR_VALUES': 'urn:signicat:oidc:portal:auth-portal',   # ACR values
     'CRED64': 'ZGVtby1wcmVwcm9kOm1xWi1fNzUtZjJ3TnNpUVRPTmI3T240YUFaN3pjMjE4bXJSVmsxb3VmYTg='
