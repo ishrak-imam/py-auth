@@ -1,4 +1,4 @@
-# py-sigauth
+# py-sigauth: OIDC
 ### Example implementation of Signicat Authentication using OpenID Connect
 
 ---
