@@ -23,6 +23,9 @@ You need to change the file ```settings_preprod_demo.py``` or create a copy with
 
 See [```settings_preprod_demo.py```](./settings_preprod_demo.py) for details. We suggest making a new file ```settings_my-service.py``` where you store your settings then refer to that in ```oidc_auth.py``` and ```oidc_funcs.py```.
 
+### Live Implementation
+A live implementation of this repository can be found at [https://sign.dag.ninja/](https://sign.dag.ninja/).
+
 ### References
 For general information about the Authentication service, please refer to [Get Started With Authentication](https://developer.signicat.com/documentation/authentication/get-started-with-authentication/).
 
