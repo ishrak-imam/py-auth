@@ -1,4 +1,4 @@
-# py-sigauth:
+# py-auth:
 ### Example implementations of Signicat Authentication in Python
 
 ---

@@ -1,4 +1,4 @@
-# py-sigauth: OIDC
+# py-auth: OIDC
 ### Signicat Authentication using OpenID Connect
 
 ---
