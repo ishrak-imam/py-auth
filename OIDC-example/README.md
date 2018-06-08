@@ -1,6 +1,6 @@
 # py-auth: OIDC
 ### Signicat Authentication using OpenID Connect
-
+ 
 ---
 
 A simple implementation of Signicat Authentication via the OIDC protocol.

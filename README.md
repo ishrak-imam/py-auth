@@ -1,6 +1,6 @@
 # py-auth:
 ### Example implementations of Signicat Authentication in Python
-
+ 
 ---
 
 This repository illustrates simple implementations of Signicat Authentication in Python.
