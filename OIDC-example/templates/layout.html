@@ -17,7 +17,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
   <script>
     const state = "{{state}}";
-    if (window.location.href == "https://sign.dag.ninja/") {
+    if (!window.location.href.includes("consume")) {
       Cookies.set('auth_state', state, { expires: 1/144, secure: true });
     }
   </script>
